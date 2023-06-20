@@ -258,13 +258,16 @@ router.get('/crypto', async (req,res)=>{
         changes:''
     }
 
+  try{
     const fetchedcCypto = await getCrypto();
     console.log(fetchedcCypto)
 
     crypto.price = fetchedcCypto.price
     crypto.changes = fetchedcCypto.changes
 
-   
+   }catch (e) {
+        console.log(e)
+    }
 
     res.send(crypto)
 
