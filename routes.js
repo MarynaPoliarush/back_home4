@@ -6,8 +6,7 @@ const router = express.Router()
 const db = require('./data')
 const mongodb = require('mongodb')
 
-const {getALD}= require('./parserToCompare')
-const {updateDB}= require('./parserToUpdateDB')
+
 const {getRate}= require('./parserRate')
 const {getTRY} = require('./parserRateTRY')
 const {getRUB} = require('./parserRateRUB')
